@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::143787628822:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "sample-website",
+            "image": "<IMAGE1_NAME>",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "ecs-demo"
+}
